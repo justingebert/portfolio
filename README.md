@@ -39,6 +39,9 @@ This is a portfolio website that I created to showcase my work. It includes a sh
 
 ## Process:
 ### thoughts:
+- use tailwind shadcn-ui for styling
+- use vite for bundling
+- maybe use three.js for animations 
 
 ### development:
 - create repo on github
