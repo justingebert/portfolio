@@ -1,12 +1,12 @@
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 
 function App() {
-
   return (
     <>
-      <div>
-        <p className="text-3xl font-bold underline">JG</p>
-      </div>
+      <BrowserRouter>
+      
+      </BrowserRouter>
     </>
   );
 }

@@ -48,3 +48,12 @@ This is a portfolio website that I created to showcase my work. It includes a sh
 - init project with vite
 
 ### challenges:
+
+
+
+### Todo:
+- [x] create repo on github
+- [x] init project with vite
+- [] reasearch tailwind extend
+- [] reasearch shadcn-ui
+- [] reasearch animations and add in utils
