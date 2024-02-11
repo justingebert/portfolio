@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   const [active, setActive] = useState<string>("");
 
   return (
-    <nav className=" px-7 w-full flex items-center py-5 fixed top-0 z-20">
+    <nav className=" w-full top-0 z-[20] flex items-center py-5 px-7 ">
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link to="/">
           <h1>Justin Gebert</h1> {/* add iamge here */}

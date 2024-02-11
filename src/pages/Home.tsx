@@ -1,9 +1,10 @@
 import React from 'react';
+import { Button } from "@/components/ui/button"
 
 const Home: React.FC = () => {
     return (
         <div>
-            {/* Your content goes here */}
+           <h1>HOME</h1>
         </div>
     );
 };

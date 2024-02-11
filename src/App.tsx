@@ -7,12 +7,16 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
-        <Home />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
+        <div className=" relative z-0 ">
+          <div>
+            <Navbar />
+            <Home />
+          </div>
+          <About />
+          <Experience />
+          <Projects />
+          <Contact />
+        </div>
       </BrowserRouter>
     </>
   );

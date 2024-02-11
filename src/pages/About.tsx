@@ -4,6 +4,7 @@ const About: React.FC = () => {
     return (
         <div>
             {/* Add your content here */}
+            <h1>About</h1>
         </div>
     );
 };
