@@ -50,6 +50,10 @@ This is a portfolio website that I created to showcase my work. It includes a sh
 ### challenges:
 
 
+### learnings:
+
+### left last time:
+
 
 ### Todo:
 - [x] create repo on github
