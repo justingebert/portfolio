@@ -1,30 +1,56 @@
 import React, { useState } from "react";
-import navLinks, { NavLink } from "../data/navLinks";
-import { Link } from "react-router-dom";
+import navLinks, { NavLinkType } from "../data/navLinks";
+import { NavLink } from "react-router-dom";
+import menu from "../assets/icons/menu-50x50-black.png";
+import close from "../assets/icons/closemenu-50x50-black.png";
+
+
+
 
 const Navbar: React.FC = () => {
-  const [active, setActive] = useState<string>("");
+  const [activePage, setActivePage] = useState<string>("");
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  }
+
+  const NavLinks = () => {
+    return (
+      <>
+        {navLinks.map((link: NavLinkType) => (
+          <NavLink 
+            key={link.id} 
+            to={link.id} 
+            className={({ isActive }) => 
+              `${isActive ? "text-red-500" : "text-black"} hover:text-white text-[18px] font-medium cursor-pointer`
+            }
+            onClick={() => setActivePage(link.title)}
+          >
+            {link.title}
+          </NavLink>
+        ))}
+        </>
+    );
+  };
 
   return (
-    <nav className=" w-full top-0 z-[20] flex items-center py-5 px-7 ">
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link to="/">
-          <h1>Justin Gebert</h1> {/* add iamge here */}
-        </Link>
-        <ul className=' hidden sm:flex flex-row gap-10'>
-          {navLinks.map((link: NavLink) => (
-            <li
-              key={link.id}
-              className={`${
-                active === link.title ? "text-white" : "text-secondary"
-              }
-                        hover:text-black text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
-            >
-              <a href={link.id}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
+    <nav className="">
+      <div className="flex justify-between">
+        <NavLinks />
+      </div>
+      <div>
+        <img
+          src={menuOpen ? close : menu}
+          alt="menu"
+          className="w-[20px] cursor-pointer"
+          onClick={toggleMenu}
+        />
+        {menuOpen && (
+          <div className="absolute top-16 w-full bg-black">
+            <NavLinks />
+          </div>
+        )}
       </div>
     </nav>
   );

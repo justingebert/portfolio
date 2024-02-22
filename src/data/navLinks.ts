@@ -1,12 +1,12 @@
-export type NavLink = {
+export type NavLinkType = {
   id: string;
   title: string;
 };
 
-const navLinks: NavLink[] = [
+const navLinks: NavLinkType[] = [
   {
-    id: "about",
-    title: "About",
+    id: "aboutme",
+    title: "About Me",
   },
   {
     id: "work",
