@@ -9,13 +9,13 @@ const navLinks: NavLinkType[] = [
     title: "About Me",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "projects",
+    title: "Projects",
   },
-  {
+  /* {
     id: "contact",
     title: "Contact",
-  },
+  }, */
 ];
 
 export default navLinks;
