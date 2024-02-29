@@ -35,24 +35,26 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="">
-      <div className="flex justify-between">
-        <NavLinks />
-      </div>
-      <div>
-        <img
-          src={menuOpen ? close : menu}
-          alt="menu"
-          className="w-[20px] cursor-pointer"
-          onClick={toggleMenu}
-        />
-        {menuOpen && (
-          <div className="absolute top-16 w-full bg-black">
-            <NavLinks />
-          </div>
-        )}
-      </div>
-    </nav>
+    <>
+      <nav className="flex justify-end">
+        <div className="hidden w-full justify-between sm:flex space-x-4">
+          <NavLinks />
+        </div>
+        <div className="sm:hidden mx-4 ">
+          <img
+            src={menuOpen ? close : menu}
+            alt="menu"
+            className="w-[20px] cursor-pointer"
+            onClick={toggleMenu}
+          />
+        </div>
+      </nav>
+      {menuOpen && (
+        <div className="sm:hidden flex basis-full flex-col items-left my-4">
+          <NavLinks />
+        </div>
+      )}
+    </>
   );
 };
 
